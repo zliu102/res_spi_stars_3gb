@@ -341,7 +341,7 @@ reservoir_sampler_stars_3gb(PG_FUNCTION_ARGS)
 
     HeapTuple reservoir[sampleSize];
     char *last_group = ""; 
-    int poscnt;
+    int poscnt = 0;
     bool initialized = false;
     for(row = 0; row < SPI_processed; row++){
      
