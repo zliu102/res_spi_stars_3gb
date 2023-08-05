@@ -347,7 +347,7 @@ reservoir_sampler_stars_3gb(PG_FUNCTION_ARGS)
      
         int attnum1 = SPI_fnumber(SPI_tuptable->tupdesc, "plate");
         int attnum2 = SPI_fnumber(SPI_tuptable->tupdesc, "mjd");
-        int attnum3 = SPI_fnumber(SPI_tuptable->tupdesc, "linenpixright");
+        int attnum3 = SPI_fnumber(SPI_tuptable->tupdesc, "linesigma");
         char* value1 = SPI_getvalue((SPI_tuptable->vals)[row], SPI_tuptable->tupdesc, attnum1);
         char* value2 = SPI_getvalue((SPI_tuptable->vals)[row], SPI_tuptable->tupdesc, attnum2);
         char* value3 = SPI_getvalue((SPI_tuptable->vals)[row], SPI_tuptable->tupdesc, attnum3);
