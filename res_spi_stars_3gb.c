@@ -322,14 +322,14 @@ reservoir_sampler_stars_3gb(PG_FUNCTION_ARGS)
 
 
     //tupdesc = SPI_tuptable->tupdesc;
-    tupdesc = CreateTemplateTupleDesc(6, false);
+    tupdesc = CreateTemplateTupleDesc(5, false);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "plate", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "mjd", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "linenpixleft", INT4OID, -1, 0);
     //TupleDescInitEntry(tupdesc, (AttrNumber) 1, "l_extendedprice", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "fiberid", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "linenpixright", INT4OID, -1, 0);
-    TupleDescInitEntry(tupdesc, (AttrNumber) 1, "linesigma", INT8OID, -1, 0);
+    //TupleDescInitEntry(tupdesc, (AttrNumber) 1, "linesigma", INT8OID, -1, 0);
     //TupleDescInitEntry(tupdesc, (AttrNumber) 1, "l_linenumber", INT4OID, -1, 0);
     oldcontext = MemoryContextSwitchTo(rsinfo->econtext->ecxt_per_query_memory);
     tupstore = tuplestore_begin_heap(true, false, work_mem);
