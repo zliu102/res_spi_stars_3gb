@@ -322,7 +322,7 @@ reservoir_sampler_stars_3gb(PG_FUNCTION_ARGS)
 
 
     //tupdesc = SPI_tuptable->tupdesc;
-    tupdesc = CreateTemplateTupleDesc(8, false);
+    tupdesc = CreateTemplateTupleDesc(6, false);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "plate", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "fiberid", INT4OID, -1, 0);
     TupleDescInitEntry(tupdesc, (AttrNumber) 1, "mjd", INT4OID, -1, 0);
