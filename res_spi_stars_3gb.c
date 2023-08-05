@@ -355,7 +355,7 @@ reservoir_sampler_stars_3gb(PG_FUNCTION_ARGS)
         current_group = strcat(current_group,value2);
         current_group = strcat(current_group,",");
         current_group = strcat(current_group,value3);
-        
+        elog(INFO, "current_group: %s", current_group);
         if(strcmp(current_group, last_group)){
             //check whether is different groups
             //elog(INFO, "different group");
